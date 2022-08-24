@@ -1,12 +1,14 @@
-const getPosts = (posts) => {
-  const blosArray = [];
+export const getPosts = (posts) => {
+  const postsArray = [];
 
   for (let i = 0; i < posts.length; i++) {
     const element = posts[i];
-    blosArray.push(element.frontmatter);
+    postsArray.push(element.frontmatter);
   }
 
-  return blosArray;
-};
+  const dateFilteredPosts = postsArray.sort(
+    (a, b) => Date.parse(b.pubDate) - Date.parse(a.pubDate)
+  );
 
-export default getPosts;
+  return dateFilteredPosts;
+};

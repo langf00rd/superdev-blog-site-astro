@@ -1,5 +1,5 @@
 ---
-import getPosts from "../lib/getPosts";
+import { getPosts } from "../lib/getPosts";
 import BlogCard from "./BlogCard.astro";
 
 const posts = await Astro.glob("../pages/post/*.md");
@@ -11,7 +11,7 @@ const styles = {
 ---
 
 <section class={styles.blogs}>
-    <div class={styles.blogsContainer}>
+    <ul class={styles.blogsContainer}>
         {
             getPosts(posts).map(
                 (blog: {
@@ -31,5 +31,5 @@ const styles = {
                 }
             )
         }
-    </div>
+    </ul>
 </section>
