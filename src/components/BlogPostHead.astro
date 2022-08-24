@@ -1,6 +1,4 @@
 ---
-// Import the global.css file here so that it is included on
-// all pages through the use of the <BaseHead /> component.
 import { defaultMeta } from "../lib/meta";
 import "../styles/global.css";
 
@@ -13,7 +11,7 @@ const { title, description, url, banner } = Astro.props;
 <meta name="description" content={description || defaultMeta.description} />
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="icon" type="image/ico" href="/favicon.ico" />
 <meta name="generator" content={Astro.generator} />
 <title>{title || defaultMeta.title}</title>
 

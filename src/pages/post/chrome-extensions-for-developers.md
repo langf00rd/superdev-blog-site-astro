@@ -5,6 +5,7 @@ description: "Here are some essential browser extensions every web developer mus
 pubDate: "Aug 13 2022"
 banner: "/images/chrome-extensions-for-developers.webp"
 slug: "chrome-extensions-for-developers"
+tags: "productivity, tools, webdev, browser"
 ---
 
 Chrome extensions are handy tools that almost everyone who has a Chrome browser uses. These extensions can make it easier to perform tasks that normally require opening a new browser, performing a search, and clicking a few links and buttons.
@@ -121,6 +122,6 @@ A tool for quickly testing the responsiveness of a website. It includes a variet
 [Install here](https://chrome.google.com/webstore/detail/responsive-web-design-tes/enhcpefphhaiikpobimgcakinhabgiib)
 
 
-# Conclusion
+## Conclusion
 
 That concludes this article. Thank you for reading. I hope you found it beneficial.

@@ -8,6 +8,8 @@
 
 body {
   font-family: "Rubik", sans-serif;
+  color: #222;
+  background: #fff0;
   /* background: #e2eafe73; */
 }
 h1,
@@ -21,9 +23,19 @@ b {
   font-weight: 600;
   /* color: #222; */
 }
-a {
-  /* color: #3273dc; */
+
+h1 {
+  font-size: 3.3rem;
 }
+
+h2 {
+  font-size: 2.3rem;
+}
+
+h3 {
+  font-size: 1.7rem;
+}
+
 nav a {
   margin-right: 10px;
 }
@@ -44,10 +56,9 @@ img {
   max-width: 100%;
   height: auto;
 }
-code {
-  padding: 2px 5px;
+/* code {
   background-color: #f2f2f2;
-}
+} */
 pre {
   padding: 1rem;
   margin: 1rem 0;
@@ -110,8 +121,72 @@ blockquote {
 }
 
 .gradient-text {
-  background: -webkit-linear-gradient(123deg, #ff822d, #ffc107);
+  /* background: -webkit-linear-gradient(123deg, #ff822d, #ffc107); */
+  /* background: -webkit-linear-gradient(123deg, #8295ff, #03a9f4); */
+  background: -webkit-linear-gradient(123deg, #a8ff72, #ffa000);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.post-content {
+  line-height: 34px;
+}
+
+.post-content img {
+  border: 2px solid #f1f1f1;
+  border-radius: 5px;
+  width: max-content;
+  margin: 10px 0;
+}
+
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4,
+.post-content h5,
+.post-content h2 {
+  margin-top: 50px;
+  margin-bottom: 15px;
+  font-weight: 500;
+  line-height: 50px;
+}
+
+.post-content a {
+  color: #7e57c2;
+}
+
+.post-content a:hover {
+  text-decoration: underline;
+}
+
+blockquote {
+  border: none;
+  border-left: 3px solid #7e57c2;
+  margin: 20px 0;
+  font-size: 24px;
+}
+
+code {
+  background: #fff9bc9e;
+  padding: 2px 5px;
+  border-radius: 7px;
+}
+
+.post-content ul {
+  list-style: inside;
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 2.3rem;
+  }
+
+  h2 {
+    font-size: 1.7rem;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
 }

@@ -2,10 +2,11 @@
 import Logo from "./Logo.astro";
 
 const styles = {
-	header: `border-b h-[60px] p-5`,
+	header: `h-[80px] p-5 bg-[#7e57c2] text-[#fff]`,
 	headerWrapper: `flex items-center justify-between h-full max-w-6xl m-auto`,
 	nav: `flex list-none`,
-	link: `ml-10 text-[#000]`,
+	link: `ml-10 font-medium text-[18px]`,
+	linkIcon:`relative -top-[2px]`,
 };
 ---
 
@@ -13,8 +14,8 @@ const styles = {
 	<div class={styles.headerWrapper}>
 		<Logo />
 		<nav class={styles.nav}>
-			<a class={styles.link} href="/blog">Blogs</a>
-			<a class={styles.link} href="/">Videos</a>
+			<a class={styles.link} href="/">📚 Blogs</a>
+			<a class={styles.link} href="/videos"><span class={styles.linkIcon}>📺</span> Videos</a>
 		</nav>
 	</div>
 </header>

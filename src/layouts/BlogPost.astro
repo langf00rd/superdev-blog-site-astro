@@ -6,8 +6,10 @@ import BlogPostHead from "../components/BlogPostHead.astro";
 // import { getReadTime } from "../lib/getReadTime";
 
 const {
-	content: { title, pubDate, description, banner },
+	content: { title, pubDate, description, banner, tags },
 } = Astro.props;
+
+const postTags = tags ? tags.split(",") : []
 
 // const postData = await Astro.glob(`/src/pages/post/2.md`);
 // const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -16,9 +18,11 @@ const {
 
 const styles = {
 	main: ` max-w-4xl m-auto`,
-	banner: `w-full mb-5`,
+	banner: `w-full mb-5 rounded-md`,
 	hero: `text-center border-b p-5 mb-10`,
 	h1: `text-4xl font-medium`,
+	tags: `flex items-center justify-center flex-wrap mt-3`,
+	tag: `bg-[#eeedff] p-2 px-4 m-2 rounded-md`,
 };
 ---
 
@@ -37,9 +41,16 @@ const styles = {
 				)
 			}
 			<h1 class={styles.h1}>{title}</h1>
-			<div>{pubDate}</div>
+			<div class="opacity-70 mt-3">{pubDate}</div>
+			<ul class={styles.tags}>
+				{
+					postTags.map((tag: string) => {
+						return <span class={styles.tag}>#{tag}</span>;
+					})
+				}
+			</ul>
 		</div>
-		<div class="p-5">
+		<div class="p-5 text-[18px] text-[#484848] post-content">
 			<slot />
 		</div>
 	</article>
