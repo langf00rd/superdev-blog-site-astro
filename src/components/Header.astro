@@ -1,15 +1,17 @@
 ---
+import Logo from "./Logo.astro";
+
 const styles = {
-	header: `bg-[#f1f1f1] h-[60px]`,
+	header: `border-b h-[60px] p-5`,
 	headerWrapper: `flex items-center justify-between h-full max-w-6xl m-auto`,
 	nav: `flex list-none`,
-	link: `ml-10`,
+	link: `ml-10 text-[#000]`,
 };
 ---
 
 <header class={styles.header}>
 	<div class={styles.headerWrapper}>
-		<h1>LOGO</h1>
+		<Logo />
 		<nav class={styles.nav}>
 			<a class={styles.link} href="/blog">Blogs</a>
 			<a class={styles.link} href="/">Videos</a>

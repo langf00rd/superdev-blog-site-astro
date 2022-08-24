@@ -1,0 +1,19 @@
+---
+import "../styles/global.css";
+
+const { title, banner, description, search_title } = Astro.props;
+
+const styles = {
+    card: `max-w-[350px] m-5 cursor-pointer`,
+    h2: `text-2xl my-3`,
+    banner: `w-full`,
+};
+---
+
+<a href={`/post/${search_title}`}>
+    <div class={styles.card}>
+        <img class={styles.banner} src={banner} />
+        <h2 class={styles.h2}>{title}</h2>
+        <p class="multiline--2">{description}</p>
+    </div>
+</a>

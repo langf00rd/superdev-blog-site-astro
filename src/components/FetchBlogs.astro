@@ -1,0 +1,42 @@
+---
+import BasicLayout from "../layouts/BasicLayout.astro";
+import BlogCard from "./BlogCard.astro";
+
+const response = await fetch(
+    "https://superdev-backend.herokuapp.com/post/get-posts"
+);
+const data = await response.json();
+const blogs = data.payload || [];
+
+const styles = {
+    blogs: `max-w-6xl m-auto pt-10`,
+    blogsContainer: `grid grid-cols-3`,
+};
+---
+
+<BasicLayout>
+    <section class={styles.blogs}>
+        <div class={styles.blogsContainer}>
+            {
+                blogs.map(
+                    (blog: {
+                        title: any;
+                        banner: any;
+                        description: any;
+                        search_title: any;
+                    }) => {
+                        return (
+                            <BlogCard
+                                title={blog.title}
+                                banner={blog.banner}
+                                description={blog.description}
+                                search_title={blog.search_title}
+                            />
+                        );
+                    }
+                )
+            }
+        </div>
+    </section>
+    <!--  -->
+</BasicLayout>

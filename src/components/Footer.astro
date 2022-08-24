@@ -1,13 +1,12 @@
 ---
 const today = new Date();
+const year = today.getFullYear();
+
+const styles = {
+	footer: `text-center p-10`,
+};
 ---
 
-<footer>
-	&copy; {today.getFullYear()} YOUR NAME HERE. All rights reserved.
+<footer class={styles.footer}>
+	&copy; {year} Xerxes. All rights reserved.
 </footer>
-<style>
-	footer {
-		padding: 25px;
-		text-align: center;
-	}
-</style>

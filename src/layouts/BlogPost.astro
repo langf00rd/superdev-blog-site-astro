@@ -1,4 +1,53 @@
 ---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { getReadTime } from "../lib/getReadTime";
+
+const postData = await Astro.glob("/src/pages/post/1.md");
+
+const {
+	content: { title, description, pubDate, banner, content },
+} = Astro.props;
+
+const styles = {
+	main: ` max-w-6xl m-auto`,
+	banner: `w-full max-w-3xl m-auto mb-5`,
+	hero: `bg-[#f1f1f1] text-center p-5`,
+	h1: `text-4xl font-medium`,
+};
+
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>{title}</title>
+	</head>
+	<body>
+		<Header />
+		<main class={styles.main}>
+			<article>
+				<div class={styles.hero}>
+					{
+						banner && (
+							<img class={styles.banner} src={banner} alt={`image of ${title}`} />
+						)
+					}
+					<h1 class={styles.h1}>{title}</h1>
+					<div>{pubDate} {getReadTime(postData[0].rawContent())} </div>
+				</div>
+				<slot />
+			</article>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+
+<!-- ---
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
@@ -54,4 +103,4 @@ const {
 		</main>
 		<Footer />
 	</body>
-</html>
+</html> -->
