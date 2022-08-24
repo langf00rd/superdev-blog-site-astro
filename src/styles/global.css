@@ -1,4 +1,4 @@
-/*
+/* 
   The CSS in this style tag is based off of Bear Blog's default CSS.
   https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
   License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
@@ -9,14 +9,6 @@
 body {
   font-family: "Rubik", sans-serif;
   background: #e2eafe73;
-  /* margin: auto;
-  padding: 20px;
-  max-width: 65ch;
-  text-align: left; */
-  /* word-wrap: break-word;
-  overflow-wrap: break-word; */
-  /* line-height: 1.5; */
-  /* color: #444; */
 }
 h1,
 h2,
@@ -58,6 +50,8 @@ code {
 }
 pre {
   padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 5px;
 }
 pre > code {
   all: unset;

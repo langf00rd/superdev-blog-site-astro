@@ -1,0 +1,35 @@
+---
+import getPosts from "../lib/getPosts";
+import BlogCard from "./BlogCard.astro";
+
+const posts = await Astro.glob("../pages/post/*.md");
+
+const styles = {
+    blogs: `max-w-6xl m-auto pt-10`,
+    blogsContainer: `grid grid-cols-1 sm:grid-cols-3`,
+};
+---
+
+<section class={styles.blogs}>
+    <div class={styles.blogsContainer}>
+        {
+            getPosts(posts).map(
+                (blog: {
+                    title: any;
+                    banner: any;
+                    description: any;
+                    slug: any;
+                }) => {
+                    return (
+                        <BlogCard
+                            title={blog.title}
+                            banner={blog.banner}
+                            description={blog.description}
+                            slug={blog.slug}
+                        />
+                    );
+                }
+            )
+        }
+    </div>
+</section>
