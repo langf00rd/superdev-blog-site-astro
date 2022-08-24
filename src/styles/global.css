@@ -12,6 +12,8 @@
   --hero-bg: linear-gradient(to bottom, #7e57c2, #9200c0);
   --header-bg: #7e57c2;
   --post-content-text-color: #484848;
+  --tag-bg: #eeedff;
+  --code-bg: #fff9bc9e;
 }
 
 body {
@@ -22,11 +24,17 @@ body {
 }
 
 .dark {
-  --bg-color: #191028;
+  --bg-color: #0c0020;
   --text-color: #fff;
   --hero-bg: #1b004a;
   --header-bg: #1b004a;
   --post-content-text-color: #fff;
+  --tag-bg: #171b2c;
+  --code-bg: #171b2c;
+}
+
+.tag {
+  background: var(--tag-bg);
 }
 
 header {
@@ -157,7 +165,7 @@ blockquote {
 }
 
 .post-content img {
-  border: 2px solid #f1f1f1;
+  border: 1px solid #f1f1f1;
   border-radius: 5px;
   width: max-content;
   margin: 10px 0;
@@ -191,7 +199,7 @@ blockquote {
 }
 
 code {
-  background: #fff9bc9e;
+  background: var(--code-bg);
   padding: 2px 5px;
   border-radius: 7px;
 }
