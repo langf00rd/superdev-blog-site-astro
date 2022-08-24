@@ -6,16 +6,18 @@ const styles = {
 	headerWrapper: `flex items-center justify-between h-full max-w-6xl m-auto`,
 	nav: `flex list-none`,
 	link: `ml-5 font-medium text-[18px]`,
-	linkIcon:`relative -top-[2px]`,
+	linkIcon: `relative -top-[2px]`,
 };
 ---
 
 <header class={styles.header}>
 	<div class={styles.headerWrapper}>
-		<Logo />
+		<a href="/"><Logo /></a>
 		<nav class={styles.nav}>
 			<a class={styles.link} href="/">📚 Blogs</a>
-			<a class={styles.link} href="/videos"><span class={styles.linkIcon}>📺</span> Videos</a>
+			<a class={styles.link} href="/videos"
+				><span class={styles.linkIcon}>📺</span> Videos
+			</a>
 		</nav>
 	</div>
 </header>

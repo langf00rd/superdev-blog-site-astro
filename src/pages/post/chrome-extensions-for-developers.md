@@ -3,7 +3,7 @@ layout: "../../layouts/BlogPost.astro"
 title: "Chrome Extensions Every Developer Must Have"
 description: "Here are some essential browser extensions every web developer must have."
 pubDate: "Aug 13 2022"
-banner: "/images/chrome-extensions-for-developers.webp"
+banner: "/images/posts/chrome-extensions-for-developers.webp"
 slug: "chrome-extensions-for-developers"
 tags: "productivity, tools, webdev, browser"
 ---

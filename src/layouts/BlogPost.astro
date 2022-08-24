@@ -9,7 +9,7 @@ const {
 	content: { title, pubDate, description, banner, tags },
 } = Astro.props;
 
-const postTags = tags ? tags.split(",") : []
+const postTags = tags ? tags.split(",") : [];
 
 // const postData = await Astro.glob(`/src/pages/post/2.md`);
 // const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -36,7 +36,7 @@ const styles = {
 					<img
 						class={styles.banner}
 						src={banner}
-						alt={`image of ${title}`}
+						alt={`image of '${title}'`}
 					/>
 				)
 			}

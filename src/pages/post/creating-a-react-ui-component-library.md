@@ -3,7 +3,7 @@ layout: "../../layouts/BlogPost.astro"
 title: "Creating a React UI Component Library"
 description: "Here are some essential browser extensions every web developer must have."
 pubDate: "Aug 14 2022"
-banner: "/images/creating-a-react-ui-component-library.avif"
+banner: "/images/posts/creating-a-react-ui-component-library.avif"
 slug: "creating-a-react-ui-component-library"
 tags: "react, design, library, javascript"
 ---

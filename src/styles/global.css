@@ -123,7 +123,8 @@ blockquote {
 .gradient-text {
   /* background: -webkit-linear-gradient(123deg, #ff822d, #ffc107); */
   /* background: -webkit-linear-gradient(123deg, #8295ff, #03a9f4); */
-  background: -webkit-linear-gradient(123deg, #a8ff72, #ffa000);
+  /* background: -webkit-linear-gradient(123deg, #a8ff72, #ffa000); */
+  background: -webkit-linear-gradient(123deg, #a8ff72, #cddc39);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -189,4 +190,8 @@ code {
   h3 {
     font-size: 1.3rem;
   }
+}
+
+.hero {
+  background: linear-gradient(to bottom, #7e57c2, #9200c0);
 }

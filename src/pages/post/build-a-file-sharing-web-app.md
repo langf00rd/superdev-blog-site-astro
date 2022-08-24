@@ -3,7 +3,7 @@ layout: "../../layouts/BlogPost.astro"
 title: "Build A File Sharing Web App"
 description: "Let's create a basic file sharing web app for transferring files between devices via a web socket connection."
 pubDate: "Jun 23 2022"
-banner: "/images/build-a-file-sharing-web-app.webp"
+banner: "/images/posts/build-a-file-sharing-web-app.webp"
 slug: "build-a-file-sharing-web-app"
 ---
 
