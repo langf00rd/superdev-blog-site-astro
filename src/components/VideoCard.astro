@@ -1,0 +1,19 @@
+---
+import "../styles/global.css";
+
+const { title, date, link, thumbnail } = Astro.props;
+
+const styles = {
+    card: `mb-10 max-w-[350px] m-5 cursor-pointer`,
+    h2: `multiline--2 text-2xl my-3 font-medium mt-5`,
+    thumbnail: `w-full rounded-md`,
+};
+---
+
+<a href={`${link}`}>
+    <div class={styles.card}>
+        <img class={styles.thumbnail} src={thumbnail} />
+        <h2 class={styles.h2}>{title}</h2>
+        <p>{date}</p>
+    </div>
+</a>

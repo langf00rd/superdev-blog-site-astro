@@ -1,0 +1,33 @@
+---
+import { getPosts } from "../lib/getPosts";
+import { videos } from "../lib/videos";
+import BlogCard from "./BlogCard.astro";
+import VideoCard from "./VideoCard.astro";
+
+const posts = await Astro.glob("../pages/post/*.md");
+
+const styles = {
+    blogs: `max-w-6xl m-auto pt-10`,
+    blogsContainer: `grid grid-cols-1 sm:grid-cols-3`,
+};
+---
+
+<section class={styles.blogs}>
+    <div class="p-5">
+        <h2>Latest Video tutorials</h2>
+    </div>
+    <ul class={styles.blogsContainer}>
+        {
+            videos.map((video) => {
+                return (
+                    <VideoCard
+                        title={video.title}
+                        date={video.date}
+                        link={video.link}
+                        thumbnail={video.thumbnail}
+                    />
+                );
+            })
+        }
+    </ul>
+</section>
