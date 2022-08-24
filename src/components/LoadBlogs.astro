@@ -18,10 +18,11 @@ const styles = {
         {
             getPosts(posts).map(
                 (blog: {
-                    title: any;
-                    banner: any;
-                    description: any;
-                    slug: any;
+                    title: string;
+                    banner: string;
+                    description: string;
+                    slug: string;
+                    tags: string;
                 }) => {
                     return (
                         <BlogCard
@@ -29,6 +30,7 @@ const styles = {
                             banner={blog.banner}
                             description={blog.description}
                             slug={blog.slug}
+                            tags={blog.tags}
                         />
                     );
                 }

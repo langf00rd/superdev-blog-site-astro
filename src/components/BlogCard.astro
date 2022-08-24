@@ -1,12 +1,16 @@
 ---
 import "../styles/global.css";
 
-const { title, banner, description, slug } = Astro.props;
+const { title, banner, description, slug, tags } = Astro.props;
+
+const postTags = tags ? tags.split(",") : [];
 
 const styles = {
     card: `mb-10 max-w-[350px] m-5 cursor-pointer`,
     h2: `text-2xl my-3 font-medium mt-5`,
     banner: `w-full rounded-md`,
+    tags: `flex items-center flex-wrap mt-3`,
+    tag: `tag text-[13px] rounded-md m-2 ml-0 p-1 px-2`,
 };
 ---
 
@@ -15,5 +19,12 @@ const styles = {
         <img class={styles.banner} src={banner} />
         <h2 class={styles.h2}>{title}</h2>
         <p class="multiline--2">{description}</p>
+        <ul class={styles.tags}>
+            {
+                postTags.map((tag: string) => {
+                    return <span class={styles.tag}>#{tag}</span>;
+                })
+            }
+        </ul>
     </div>
 </a>

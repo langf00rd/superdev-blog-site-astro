@@ -5,6 +5,7 @@ description: "Let's create a basic file sharing web app for transferring files b
 pubDate: "Jun 23 2022"
 banner: "/images/posts/build-a-file-sharing-web-app.webp"
 slug: "build-a-file-sharing-web-app"
+tags: "build, nodejs, webdev, websockets"
 ---
 
 Ever wanted to share files from your iPhone to your Windows PC, or from your laptop to another laptop without going through the hard way? In this article, I'm going to walk you through how I built a file-sharing web app with vanilla javascript, Nodejs, express, and the socket io library.
