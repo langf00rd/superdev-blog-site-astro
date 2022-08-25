@@ -1,7 +1,7 @@
 ---
 layout: "../../layouts/BlogPost.astro"
 title: "10 GitHub repositories to Become a React Master 👨‍💻💯"
-description: "Here are some essential browser extensions every web developer must have."
+description: "These GitHub repositories will make you a React Pro"
 pubDate: "Aug 17 2022"
 banner: "/images/posts/10-github-repositories-to-become-a-react-master.webp"
 slug: "10-github-repositories-to-become-a-react-master"

@@ -1,7 +1,7 @@
 ---
 layout: "../../layouts/BlogPost.astro"
 title: "Custom Mouse Pointer in HTML, CSS and JavaScript 👆"
-description: "Here are some essential browser extensions every web developer must have."
+description: "We will create a custom mouse pointer with HTML, CSS, and JavaScript"
 pubDate: "Aug 16 2022"
 banner: "/images/posts/custom-mouse-pointer-in-html-css-javascript.png"
 slug: "custom-mouse-pointer-in-html-css-javascript"
@@ -27,12 +27,11 @@ Create the standard HTML boilerplate code.
 ```html
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Custom Mouse Pointer</title>
-    </head>
-    <body></body>
+  <head>
+    <title>Custom Mouse Pointer</title>
+  </head>
+  <body></body>
 </html>
-
 ```
 
 Then, in the `<link>` tag of our HTML file, we import the `styles.css`.
@@ -40,11 +39,11 @@ Then, in the `<link>` tag of our HTML file, we import the `styles.css`.
 ```html
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="styles.css" />
-        <title>Custom Mouse Pointer</title>
-    </head>
-    <body></body>
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Custom Mouse Pointer</title>
+  </head>
+  <body></body>
 </html>
 ```
 
@@ -53,13 +52,13 @@ Import the JavaScript file by setting the `src` of the `<script>` tag at the bot
 ```html
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="styles.css" />
-        <title>Custom Mouse Pointer</title>
-    </head>
-    <body>
-        <script src="script.js"></script>
-    </body>
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Custom Mouse Pointer</title>
+  </head>
+  <body>
+    <script src="script.js"></script>
+  </body>
 </html>
 ```
 
@@ -68,14 +67,14 @@ Finally, create a div with the class `pointer`. This element will be used in pla
 ```html
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="styles.css" />
-        <title>Custom Mouse Pointer</title>
-    </head>
-    <body>
-        <div class="pointer"></div>
-        <script src="script.js"></script>
-    </body>
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Custom Mouse Pointer</title>
+  </head>
+  <body>
+    <div class="pointer"></div>
+    <script src="script.js"></script>
+  </body>
 </html>
 ```
 
@@ -87,12 +86,13 @@ First, we set the background of our webpage to a light purplish color.
 
 ```css
 body {
-    background: #8499ff;
+  background: #8499ff;
 }
 ```
 
 We set the webpage's height and width to the maximum height and width of the device that is viewing the page.
 css
+
 ```
 body {
     ...
@@ -123,11 +123,11 @@ You should have this for the `body`:
 
 ```css
 body {
-    background: #8499ff;
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-    cursor: none;
+  background: #8499ff;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  cursor: none;
 }
 ```
 
@@ -137,8 +137,8 @@ The `::after` pseudo-class selects content that comes after a selected element�
 
 ```css
 .pointer::after {
-    content: "🤩";
-    font-size: 40px;
+  content: "🤩";
+  font-size: 40px;
 }
 ```
 
@@ -148,7 +148,7 @@ We change the default emoji every time the mouse is clicked to (😜). The class
 
 ```css
 .pointer-clicked::after {
-    content: '😜';
+  content: "😜";
 }
 ```
 
@@ -174,22 +174,22 @@ Lets create the callback functions for these event listeners.
 
 ```javascript
 const onPointerMove = (e) => {
-    // on pointer move
-}
+  // on pointer move
+};
 
 const onMouseClick = () => {
-    // on mouse click
-}
+  // on mouse click
+};
 ```
 
 When the actual pointer moves, we want to get its position and pass it to the pointer element we created in HTML.
 
 ```javascript
 const onPointerMove = (e) => {
-    const mouseY = e.clientY;
-    const mouseX = e.clientX;
-    pointer.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
-}
+  const mouseY = e.clientY;
+  const mouseX = e.clientX;
+  pointer.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
+};
 ```
 
 The `clientY` returns the vertical coordinate of the pointer relative to the viewport. The `clientX` property, on the other hand, returns the horizontal coordinate.
@@ -200,30 +200,30 @@ When the mouse clicks, we add a new class called `pointer-clicked`. And then rem
 
 ```javascript
 const onMouseClick = () => {
-    pointer.classList.add('pointer-clicked')
-    setTimeout(() => {
-        pointer.classList.remove('pointer-clicked')
-    }, 150)
-}
+  pointer.classList.add("pointer-clicked");
+  setTimeout(() => {
+    pointer.classList.remove("pointer-clicked");
+  }, 150);
+};
 ```
 
 At the end of everything, the `script.js` file should have this:
 
 ```javascript
-const pointer = document.querySelector('.pointer');
+const pointer = document.querySelector(".pointer");
 
 const onPointerMove = (e) => {
-    const mouseY = e.clientY;
-    const mouseX = e.clientX;
-    pointer.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
-}
+  const mouseY = e.clientY;
+  const mouseX = e.clientX;
+  pointer.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
+};
 
 const onMouseClick = () => {
-    pointer.classList.add('pointer-clicked')
-    setTimeout(() => {
-        pointer.classList.remove('pointer-clicked')
-    }, 150)
-}
+  pointer.classList.add("pointer-clicked");
+  setTimeout(() => {
+    pointer.classList.remove("pointer-clicked");
+  }, 150);
+};
 
 window.addEventListener("mousemove", onPointerMove);
 window.addEventListener("mousedown", onMouseClick);

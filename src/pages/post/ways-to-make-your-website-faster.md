@@ -1,7 +1,7 @@
 ---
 layout: "../../layouts/BlogPost.astro"
 title: "5 ways to make your website 10x faster ⚡🚀"
-description: "Here are some essential browser extensions every web developer must have."
+description: "Increase website speed in these five ways"
 pubDate: "Aug 18 2022"
 banner: "/images/posts/ways-to-make-your-website-faster.png"
 slug: "ways-to-make-your-website-faster"

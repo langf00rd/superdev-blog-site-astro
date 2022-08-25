@@ -1,7 +1,7 @@
 ---
 layout: "../../layouts/BlogPost.astro"
 title: "Best Books For Learning Web Development 📚"
-description: "Here are some essential browser extensions every web developer must have."
+description: "Free books for learning web development"
 pubDate: "Aug 17 2022"
 banner: "/images/posts/best-books-for-learning-web-development.webp"
 slug: "best-books-for-learning-web-development"
