@@ -234,7 +234,3 @@ code {
 .hero {
   background: var(--hero-bg);
 }
-
-.post-content h4 {
-  font-size: 1.5rem;
-}

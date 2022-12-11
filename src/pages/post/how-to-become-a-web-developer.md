@@ -12,7 +12,7 @@ Are you interested in becoming a web developer? If so, you're in luck – web de
 
 If you're a beginner, don't worry. All you need is a willingness to learn, a bit of patience, and the right resources.
 
-![](https://res.cloudinary.com/follio/image/upload/v1670776218/bohekpecbwfybndhulsc.jpg)
+![developers are great meme](https://res.cloudinary.com/follio/image/upload/v1670776218/bohekpecbwfybndhulsc.jpg)
 
 ## Getting started
 
@@ -64,10 +64,10 @@ Ruby is a popular, dynamic language often used for web development thanks to its
 
 By learning these and other programming languages, you can become a well-rounded web developer and expand your skills and career opportunities.
 
-![enter image description here](https://res.cloudinary.com/follio/image/upload/v1670775594/nyroolcolrsqsro1mlyw.png)
-
 ## Conclusion
 
 Becoming a web developer is a challenging but rewarding journey. By learning the basics of HTML, CSS, and JavaScript, practicing, joining online communities, taking courses, and staying up-to-date, you can become a web developer and build your web applications. And by learning additional programming languages, you can further broaden your skills and expertise.
+
+![enter image description here](https://res.cloudinary.com/follio/image/upload/v1670775594/nyroolcolrsqsro1mlyw.png)
 
 > P.S. I wrote this with the help of ChatGPT 😉
