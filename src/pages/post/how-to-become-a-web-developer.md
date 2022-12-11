@@ -1,7 +1,7 @@
 ---
 layout: "../../layouts/BlogPost.astro"
 title: "How To Become A Web Developer 👨‍💻"
-description: "Here's a breakdown of how you can become a web developer"
+description: "Here is how you can become a web developer today"
 pubDate: "Dec 11 2022"
 banner: "/images/posts/how-to-become-a-web-developer.png"
 slug: "how-to-become-a-web-developer"
