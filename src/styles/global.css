@@ -68,24 +68,19 @@ h3 {
 nav a {
   margin-right: 10px;
 }
-
 textarea {
   width: 100%;
   font-size: 16px;
 }
-
 input {
   font-size: 16px;
 }
-
 content {
   line-height: 1.6;
 }
-
 table {
   width: 100%;
 }
-
 img {
   max-width: 100%;
   min-width: 50%;
@@ -100,11 +95,9 @@ pre,
   margin: 1rem 0;
   border-radius: 5px;
 }
-
 pre > code {
   all: unset;
 }
-
 blockquote {
   border: 1px solid #999;
   color: var(--text-color);
